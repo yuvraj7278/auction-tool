@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCPL 2026 Auction Sniper</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; max-width: 600px; margin: auto; }
+        .card { background: #1e293b; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); margin-bottom: 20px; }
+        h2 { color: #38bdf8; text-align: center; }
+        label { display: block; margin-top: 10px; font-weight: bold; color: #cbd5e1; }
+        select { width: 100%; padding: 10px; margin-top: 5px; border-radius: 6px; background: #0f172a; color: #fff; border: 1px solid #475569; font-size: 16px; }
+        button { width: 100%; background: #2563eb; color: white; border: none; padding: 12px; margin-top: 20px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+        #result { padding: 15px; border-radius: 6px; margin-top: 15px; display: none; font-size: 16px; }
+        .buy { background: #065f46; border: 1px solid #10b981; color: #ecfdf5; }
+        .pass { background: #7f1d1d; border: 1px solid #ef4444; color: #fef2f2; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🎯 GCPL Auction Sniper Tool</h2>
+    <p style="text-align: center; font-size: 14px; color: #94a3b8;">Select the 3 players in the current group bundle:</p>
+    
+    <label>Elite 1 Player:</label>
+    <select id="e1">
+        <option value="0">-- Select Elite 1 --</option>
+        <option value="430">Anand Mahajan (430 pts)</option>
+        <option value="278">Rahul Vinayak Jadhav (278 pts)</option>
+        <option value="431">Mayur More (431 pts)</option>
+        <option value="204">Harsh Laata (204 pts)</option>
+        <option value="272">Milind Ruparel (272 pts)</option>
+        <option value="168">Avanish Gaikwad (168 pts)</option>
+        <option value="192">Siddharth Sonawane (192 pts)</option>
+        <option value="125">Mandar Kulkarni (125 pts)</option>
+        <option value="163">Ruturaj Oak (163 pts)</option>
+        <option value="311">Mrugesh Lanjekar (311 pts)</option>
+        <option value="84">Rohit Sahani (84 pts)</option>
+        <option value="300">Pankaj Badarayani (300 pts)</option>
+        <option value="170">Yash Dubey (170 pts)</option>
+        <option value="133">Ritesh Dhore (133 pts)</option>
+        <option value="84">Subodh Deshmukh (84 pts)</option>
+        <option value="149">Uday Gaikwad (149 pts)</option>
+        <option value="0">Vedant Deshmukh</option>
+        <option value="98">Navjyot Gokave (98 pts)</option>
+        <option value="0">Sarthak Rajurwar</option>
+    </select>
+
+    <label>Elite 2 Player:</label>
+    <select id="e2">
+        <option value="0">-- Select Elite 2 --</option>
+        <option value="328">Yogesh Lokhande (328 pts)</option>
+        <option value="118">Sudhindra Pappu (118 pts)</option>
+        <option value="285">Ajietpal Sukhmani (285 pts)</option>
+        <option value="151">Samarth Bhilare (151 pts)</option>
+        <option value="72">Rohan Walvekar (72 pts)</option>
+        <option value="193">Vishal Phuge (193 pts)</option>
+        <option value="234">Vishwanath Ghodake (234 pts)</option>
+        <option value="293">Amit Ghule (293 pts)</option>
+        <option value="166">Sandeep Sawarkar (166 pts)</option>
+        <option value="301">Isheit Bidkar (Historical Peak)</option>
+        <option value="77">Adhikrao Pawar (77 pts)</option>
+        <option value="95">Priytosh Paygude (95 pts)</option>
+        <option value="151">Shreenivas Khedkar (151 pts)</option>
+        <option value="103">Sumit Sharma (103 pts)</option>
+        <option value="167">Anshul Patil (167 pts)</option>
+        <option value="210">Harshad Raje (210 pts)</option>
+        <option value="0">Rohan Gotmare</option>
+        <option value="151">Aditya Hendre (151 pts)</option>
+        <option value="127">Rohan Shinde (127 pts)</option>
+    </select>
+
+    <label>Elite 3 Player:</label>
+    <select id="e3">
+        <option value="0">-- Select Elite 3 --</option>
+        <option value="334">Sarang Kamalakar (334 pts)</option>
+        <option value="127">Abhishek Kumar (127 pts)</option>
+        <option value="346">Atul Paranjape (346 pts)</option>
+        <option value="192">Kushal Naik (192 pts)</option>
+        <option value="145">Vikram Choudhary (145 pts)</option>
+        <option value="151">Aditya Gadgil (151 pts)</option>
+        <option value="137">Prathamesh Nadkarni (137 pts)</option>
+        <option value="162">Vivek Dhumale (162 pts)</option>
+        <option value="82">Adwait Sahasrabudhe (82 pts)</option>
+        <option value="123">Santosh Chandak (123 pts)</option>
+        <option value="111">Sachin Thakre (111 pts)</option>
+        <option value="112">Saurabh Pathak (112 pts)</option>
+        <option value="176">Apurv Joshi (176 pts)</option>
+        <option value="177">Pritest Sharma (177 pts)</option>
+        <option value="148">Hrushikesh Gokave (148 pts)</option>
+        <option value="130">Prasad Kulkarni (130 pts)</option>
+        <option value="52">Srinivas Naik (52 pts)</option>
+        <option value="88">Nagesh Hudge (88 pts)</option>
+        <option value="32">Abhijit Chougule (32 pts)</option>
+    </select>
+
+    <button onclick="evaluateGroup()">Evaluate Group</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function evaluateGroup() {
+    let e1Val = parseInt(document.getElementById('e1').value);
+    let e2Val = parseInt(document.getElementById('e2').value);
+    let e3Val = parseInt(document.getElementById('e3').value);
+
+    let totalScore = e1Val + e2Val + e3Val;
+    let resultDiv = document.getElementById('result');
+    resultDiv.style.display = "block";
+
+    let advice = "";
+    let cssClass = "";
+
+    // Decision Logic based on total 2025/historical point thresholds
+    if (totalScore >= 700) {
+        cssClass = "buy";
+        advice = `🔥 <strong>STRONG BUY / BID HARD!</strong><br>Combined Group Score: <strong>${totalScore} pts</strong>.<br>This is an elite package with massive point-scoring floor. Target this to lock in your single group!`;
+    } else if (totalScore >= 550) {
+        cssClass = "buy";
+        advice = `✅ <strong>GOOD VALUE - BID MODERATE</strong><br>Combined Group Score: <strong>${totalScore} pts</strong>.<br>Solid balanced package. Worth grabbing if purse allows, but don't overspend past 5-6k.`;
+    } else {
+        cssClass = "pass";
+        advice = `❌ <strong>PASS / LET GO UNSOLD</strong><br>Combined Group Score: <strong>${totalScore} pts</strong>.<br>Low point yield. Let this group go unsold so it enters the 2-chance reshuffle loop for better combinations!`;
+    }
+
+    resultDiv.className = cssClass;
+    resultDiv.innerHTML = advice;
+}
+</script>
+
+</body>
+</html>
